@@ -1,0 +1,9 @@
+
+/* replace func4 with newyorkbg */
+
+.homepage {
+  background-image: url(./../../assets/gradientbg6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

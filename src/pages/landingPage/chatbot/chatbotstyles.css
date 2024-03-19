@@ -1,0 +1,3 @@
+.chatbot-message:first-child {
+    text-align: left !important; /* Force left alignment for first child */
+  }
