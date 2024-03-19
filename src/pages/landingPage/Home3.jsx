@@ -1,7 +1,7 @@
 import { BsStars } from "react-icons/bs";
 const Home3 = () => {
   return (
-    <section className="bg-[#DFE9FF] py-16 flex flex-row">
+    <section className="bg-[#DFE9FF] py-16 flex flex-row rounded-lg">
   <div className="bg-[#FFFFFF] py-6 sm:w-2/4 w-10/12 mx-auto sm:px-16 px-4 rounded-lg flex flex-col">
     <h1 className="text-[#072785] sm:text-4xl text-2xl text-center font-semibold my-3 dm">
       Move from information to insights with{" "}
@@ -16,7 +16,7 @@ const Home3 = () => {
   <div className="bg-[#FFFFFF] py-6 sm:w-2/4 w-10/12 mx-auto sm:px-16 px-4 rounded-lg">
 
   
-  <button className="flex flex-row justify-center items-center text-white bg-[#233B76] p-2 rounded-lg mx-auto my-3 dm h-12">
+  <button className="flex flex-row justify-center items-center text-white bg-[#233B76] p-2 rounded-lg mx-auto my-3 dm h-15">
     <BsStars className="mr-3 " /> Begin Your Investment Journey
   </button>
   </div>
