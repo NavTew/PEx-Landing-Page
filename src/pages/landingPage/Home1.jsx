@@ -1,5 +1,8 @@
 // import Img from "./../../assets/pix1.jpg";
 // import Img2 from "./../../assets/pix2.jpg";
+import imgg from "./../../assets/directConnections.webp";
+import bitmoji from "./../../assets/bitmoji.png";
+
 const Home1 = () => {
   return (
     <>
@@ -116,7 +119,7 @@ const Home1 = () => {
           </p>
         </div>
         <img
-          src="https://framerusercontent.com/images/cSeb2a0BqWY2OORsWEmwifszuF0.gif"
+          src={imgg}
           className="sm:w-2/4 w-10/12 rounded-3xl m-4 p-4"
           alt=""
         />
@@ -135,7 +138,7 @@ const Home1 = () => {
           </p>
         </div>
         <img
-          src="https://framerusercontent.com/images/7uDEPiYTJoL0H8kDMqEBmbLTWNw.gif"
+          src={bitmoji}
           className="sm:w-2/4 w-10/12 rounded-3xl m-4 p-4"
           alt=""
         />

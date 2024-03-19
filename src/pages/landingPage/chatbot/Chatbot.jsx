@@ -25,6 +25,7 @@ function Chatbot() {
   
   const [chatbotResponse, setChatbotResponse] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showText, setShowText] = useState("");
 
 
   const fetchChatbotResponse = async (message) => {
@@ -65,6 +66,7 @@ function Chatbot() {
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
+    
   };
 
   const handleSubmit = (e) => {
@@ -79,6 +81,7 @@ function Chatbot() {
     handledatashow();
     setInputText(value);
     fetchChatbotResponse(value);
+    setShowText(value);
   };
   const handledatashow = () => {
     setDataShow(true);
@@ -109,7 +112,7 @@ function Chatbot() {
         } else {
           clearInterval(typingInterval);
         }
-      }, 50); // Adjust typing speed as desired (milliseconds)
+      }, 20); // Adjust typing speed as desired (milliseconds)
   
       // Cleanup function to clear the interval on unmount
       return () => clearInterval(typingInterval);
@@ -119,9 +122,15 @@ function Chatbot() {
   return (
     <div className="dm mx-auto sm:w-2/4 w-11/12 bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]">
       {isLoading ? (
+        <>
         <div className="flex flex-row justify-start items-center text-lg my-2 mx-1">
-          <p className="text-gray-500 ps-3">Searching for {inputText}...</p>
+          <p className="font-weight: 500">User: {inputText} </p>
+          
         </div>
+        <div>
+          <p className="flex flex-row justify-start items-center text-lg my-2 mx-1">Searching...</p>
+        </div>
+        </>
       ) : dataShow ? (
         <div className={`messages-container sm:h-${isExpanded ? 96 : 40} overflow-scroll mx-auto sm:w-[100%] w-full bg-[#FFFFFF] rounded-lg my-2`}>
           {messages.map((msg, index) => (
@@ -147,6 +156,7 @@ function Chatbot() {
                 </div>
               ) : (
                 <div className="flex flex-col justify-start items-start ">
+                  <p>User: {showText} </p>
                   <div className="flex flex-row justify-start items-start ">
                     <img
                       src={Copilot}
@@ -229,6 +239,8 @@ function Chatbot() {
             placeholder="Ask me anything..."
             required
           />
+
+
           <CiCamera className="text-2xl mx-1 text-gray-400" />
           <CiMicrophoneOn className="text-2xl mx-1 text-gray-400" />
         </div>

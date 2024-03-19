@@ -15,10 +15,17 @@ const Home3 = () => {
 
   <div className="bg-[#FFFFFF] py-6 sm:w-2/4 w-10/12 mx-auto sm:px-16 px-4 rounded-lg">
 
-  
-  <button className="flex flex-row justify-center items-center text-white bg-[#233B76] p-2 rounded-lg mx-auto my-3 dm h-15">
+  <div className="flex flex-col column-gap: 5px">
+  <button className="flex flex-row justify-center items-center text-white bg-[#233B76] p-2 rounded-lg mx-auto my-7 dm h-15">
     <BsStars className="mr-3 " /> Begin Your Investment Journey
   </button>
+
+  <button className="flex flex-row justify-center items-center text-white bg-[#233B76] p-2 rounded-lg mx-auto my-7 dm h-15">
+    <BsStars className="mr-3 " /> Learn About Property Exchange
+  </button>
+
+  </div>
+
   </div>
 </section>
 
