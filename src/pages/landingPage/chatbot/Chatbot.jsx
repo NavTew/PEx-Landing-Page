@@ -10,11 +10,11 @@ import { CiMicrophoneOn } from "react-icons/ci";
 
 
 
-import newindiagate from "./../../../assets/newindiagate.png";
-import newbuilding from "./../../../assets/newbuilding.jpg";
+import gate from "./../../../assets/gateV.png";
+import building from "./../../../assets/buildingV.png";
 
 
-import newproject2 from "./../../../assets/newproject2.png";
+import laptop from "./../../../assets/laptopV.png";
 
 
 function Chatbot() {
@@ -191,14 +191,14 @@ function Chatbot() {
               className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 shadow-lg border-1 border-grey-400 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Noida vs Gurgaon")}
             >
-              <img src={newindiagate} className="mr-2 w-1/5" alt="" />
+              <img src={gate} className="mr-2 w-1/5" alt="" />
               Noida vs Gurgaon
             </button>
             <button
               className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 shadow-lg border-1 border-gray-400 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Office Space in Noida")}
             >
-              <img src={newbuilding} className="mr-2 w-1/5" alt="" />
+              <img src={building} className="mr-2 w-1/5" alt="" />
               Office Space in Noida
             </button>
             <button
@@ -206,7 +206,7 @@ function Chatbot() {
               onClick={() => handleButtonClick("Top Projects in Delhi NCR")}
               disabled={isLoading}
             >
-              <img src={newproject2} className="mr-2 w-1/5" alt="" />
+              <img src={laptop} className="mr-2 w-1/5" alt="" />
               Top Projects in Delhi NCR
             </button>
           </div>
