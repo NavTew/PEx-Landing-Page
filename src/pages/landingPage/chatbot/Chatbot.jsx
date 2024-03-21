@@ -226,31 +226,28 @@ function Chatbot() {
   </div>
 )}
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-row justify-between px-2 rounded-lg items-center bg-[#FFFFFF] py-2 sm:flex-nowrap flex-wrap"
-      >
-        <div className="flex flex-row justify-between items-center sm:w-full w-10/12 border-2 border-gray-300 sm:mx-1 rounded-full">
-          <input
-            type="text"
-            value={inputText}
-            className="sm:w-full w-3/4 px-1 text-md sm:my-1 my-0 min-h-[40px] resize-none bg-transparent focus:outline-none left-padding: 2px"
-            onChange={handleInputChange}
-            placeholder="Ask me anything..."
-            required
-          />
+<form
+  onSubmit={handleSubmit}
+  className="flex flex-col justify-between px-2 rounded-lg items-center bg-[#FFFFFF] py-2 sm:flex-nowrap flex-wrap border-blue-200"
+>
+  <div className="flex flex-row justify-between items-center sm:w-full w-10/12 border-2 border-blue-200 sm:mx-1 rounded-lg">
+    <input
+      type="text"
+      value={inputText}
+      className="sm:w-full w-3/4 px-1 text-md sm:my-1 my-0 min-h-[40px] resize-none bg-transparent focus:outline-none left-padding: 2px border-blue-200"
+      onChange={handleInputChange}
+      placeholder="Ask me anything..."
+      required
+    />
+    <CiCamera className="text-2xl mx-1 text-gray-400" />
+    <CiMicrophoneOn className="text-2xl mx-1 text-gray-400" />
+  </div>
 
-
-          <CiCamera className="text-2xl mx-1 text-gray-400" />
-          <CiMicrophoneOn className="text-2xl mx-1 text-gray-400" />
-        </div>
-
-        <button
-          type="submit"
-          disabled={isLoading} // Disable button when loading
-          className="flex sm:w-max w-fit flex-row justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative "
-        >
-
+  <button
+    type="submit"
+    disabled={isLoading} // Disable button when loading
+    className="flex w-3/4 sm:w-full justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4"
+  >
         
         
           {isLoading && (
