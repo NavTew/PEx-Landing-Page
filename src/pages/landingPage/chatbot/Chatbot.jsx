@@ -188,21 +188,22 @@ function Chatbot() {
           </div>
           <div className="flex flex-row justify-around items-center my-4 mx-auto flex-wrap">
             <button
-              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 shadow-lg border-1 border-grey-400 flex flex-row justify-center items-center"
-              onClick={() => handleButtonClick("Noida vs Gurgaon")}
+              className="text-[7px] bg-[#FFFFFF] p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
+
+              onClick={() => handleButtonClick("Noida vs Gurgaon Properties")}
             >
               <img src={gate} className="mr-2 w-1/5" alt="" />
-              Noida vs Gurgaon
+              Noida vs Gurgaon Properties
             </button>
             <button
-              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 shadow-lg border-1 border-gray-400 flex flex-row justify-center items-center"
+              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Office Space in Noida")}
             >
               <img src={building} className="mr-2 w-1/5" alt="" />
               Office Space in Noida
             </button>
             <button
-              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 shadow-lg border-1 border-gray-400 flex flex-row justify-center items-center"
+              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Top Projects in Delhi NCR")}
               disabled={isLoading}
             >
@@ -234,7 +235,7 @@ function Chatbot() {
     <input
       type="text"
       value={inputText}
-      className="sm:w-full w-3/4 px-1 text-md sm:my-1 my-0 min-h-[40px] resize-none bg-transparent focus:outline-none left-padding: 2px border-blue-200"
+      className="sm:w-full w-3/4 px-1 text-md sm:my-1 my-0 min-h-[30px] bg-transparent focus:outline-none left-padding: 2px border-blue-200 h-auto"
       onChange={handleInputChange}
       placeholder="Ask me anything..."
       required
