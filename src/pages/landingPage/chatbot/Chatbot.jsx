@@ -186,31 +186,44 @@ function Chatbot() {
             <RiStarSLine className="mx-2 text-[#B175E7] text-xl" /> You could
             try
           </div>
-          <div className="flex flex-row justify-around items-center my-4 mx-auto flex-wrap">
+
+
+          <div className="flex flex-col px-1">
+
+          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4 mx-auto flex-wrap">
             <button
-              className="text-[7px] bg-[#FFFFFF] p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
+              className="text-[7px] bg-[#FFFFFF] p-1 rounded-full m-1 w-2/5 border border-blue-200 flex flex-row justify-center items-center"
 
               onClick={() => handleButtonClick("Noida vs Gurgaon Properties")}
             >
               <img src={gate} className="mr-2 w-1/5" alt="" />
-              Noida vs Gurgaon Properties
+              Noida vs Gurgaon
             </button>
             <button
-              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
+              className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-2/5 border border-blue-200 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Office Space in Noida")}
             >
               <img src={building} className="mr-2 w-1/5" alt="" />
               Office Space in Noida
             </button>
-            <button
+            
+          </div>
+
+          <div className="flex flex-row justify-content:start w-10/12 mx-1 my-4 mx-auto flex-wrap">
+          <button
               className="text-[7px] bg-[#FFFFFF]  p-1 rounded-full m-1 w-1/4 border border-blue-200 flex flex-row justify-center items-center"
               onClick={() => handleButtonClick("Top Projects in Delhi NCR")}
               disabled={isLoading}
             >
               <img src={laptop} className="mr-2 w-1/5" alt="" />
-              Top Projects in Delhi NCR
+              Top Projects in Delhi
             </button>
           </div>
+
+          </div>
+
+
+
         </>
       )}
 
@@ -229,7 +242,7 @@ function Chatbot() {
 
 <form
   onSubmit={handleSubmit}
-  className="flex flex-col justify-between px-2 rounded-lg items-center bg-[#FFFFFF] py-2 sm:flex-nowrap flex-wrap border-blue-200"
+  className="flex flex-col justify-between px-1 rounded-lg items-center bg-[#FFFFFF] py-2 sm:flex-nowrap flex-wrap border-blue-200"
 >
   <div className="flex flex-row justify-between items-center sm:w-full w-10/12 border-2 border-blue-200 sm:mx-1 rounded-lg">
     <input
@@ -247,7 +260,8 @@ function Chatbot() {
   <button
     type="submit"
     disabled={isLoading} // Disable button when loading
-    className="flex w-3/4 sm:w-full justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4"
+    className="sm:w-full w-10/12 justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4"
+  
   >
         
         
@@ -257,7 +271,8 @@ function Chatbot() {
             </div>
           )}
           <>
-            <FaArrowRight className="mx-2" />
+            {/* <FaArrowRight className="mx-2" /> */}
+            <p>Generate with AI {`->`}</p>
           </>
         </button>
       </form>
