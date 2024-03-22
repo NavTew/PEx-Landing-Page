@@ -120,7 +120,7 @@ function Chatbot() {
   }, [chatbotResponse]);
 
   return (
-    <div className={`mx-auto ${isExpanded ? 'sm:w-3/4' : 'sm:w-2/4'} bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]`}>
+    <div className={`mx-auto ${isExpanded ? 'w-3/4' : 'w-2/4'} bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]`}>
       {isLoading ? (
         <>
         <div className="flex flex-row justify-start items-center text-lg my-2 mx-1">
@@ -132,7 +132,7 @@ function Chatbot() {
         </div>
         </>
       ) : dataShow ? (
-        <div className={`messages-container ${isExpanded ? 'sm:h-96' : 'sm:h-40'} overflow-scroll mx-auto bg-[#FFFFFF] rounded-lg my-2`}>
+        <div className={`messages-container ${isExpanded ? 'h-96' : 'h-40'} overflow-scroll mx-auto bg-[#FFFFFF] rounded-lg my-2`}>
 
           {messages.map((msg, index) => (
             <div
