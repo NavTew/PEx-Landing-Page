@@ -120,7 +120,7 @@ function Chatbot() {
   }, [chatbotResponse]);
 
   return (
-    <div className="dm mx-auto sm:w-2/4 w-11/12 bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]">
+    <div className={`mx-auto ${isExpanded ? 'sm:w-3/4' : 'sm:w-2/4'} bg-[#FFFFFF] py-2 px-1 bg-opacity-100 mb-16 rounded-lg border-1 border-[#D6D6E6]`}>
       {isLoading ? (
         <>
         <div className="flex flex-row justify-start items-center text-lg my-2 mx-1">
@@ -132,7 +132,8 @@ function Chatbot() {
         </div>
         </>
       ) : dataShow ? (
-        <div className={`messages-container sm:h-${isExpanded ? 96 : 40} overflow-scroll mx-auto sm:w-[100%] w-full bg-[#FFFFFF] rounded-lg my-2`}>
+        <div className={`messages-container ${isExpanded ? 'sm:h-96' : 'sm:h-40'} overflow-scroll mx-auto bg-[#FFFFFF] rounded-lg my-2`}>
+
           {messages.map((msg, index) => (
             <div
               key={index}
@@ -258,23 +259,22 @@ function Chatbot() {
   </div>
 
   <button
-    type="submit"
-    disabled={isLoading} // Disable button when loading
-    className="sm:w-full w-10/12 justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4"
-  
-  >
-        
-        
-          {isLoading && (
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900"></div>
-            </div>
-          )}
-          <>
-            {/* <FaArrowRight className="mx-2" /> */}
-            <p>Generate with AI {`->`}</p>
-          </>
-        </button>
+  type="submit"
+  disabled={isLoading}
+  className={`sm:w-full w-10/12 justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4 ${isLoading ? 'cursor-not-allowed' : ''}`}
+>
+  {isLoading ? (
+    <div className={`sm:w-full w-10/12 justify-center items-center bg-[#8CAFFD] text-black text-md px-2 rounded-lg py-2 relative mt-4`}>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-gray-900"></div>
+    </div>
+    </div>
+  ) : (
+    <p>Generate with AI {"->"}</p>
+  )}
+</button>
+
+
       </form>
     </div>
   );
